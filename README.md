@@ -61,3 +61,28 @@ TEST_ENVIRONMENT=Qa dotnet test
 
 # Prod
 TEST_ENVIRONMENT=Prod dotnet test
+
+## Allure Reporting
+
+Allure is integrated via the `Allure.NUnit` adapter. Test runs produce results
+into `bin/Debug/net8.0/allure-results`.
+
+### How to generate and open the Allure report
+
+From the `SauceDemo.UiTests` folder:
+
+``bash
+cd SauceDemo.UiTests
+
+# 1) Run tests
+dotnet test
+
+# 2) Remove any old generated report
+rm -rf allure-report
+
+# 3) Generate new static report from the latest results
+allure generate bin/Debug/net8.0/allure-results -o allure-report --clean
+
+# 4) Open the report in the browser
+allure open allure-report
+
