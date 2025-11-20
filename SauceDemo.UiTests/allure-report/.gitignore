@@ -1,0 +1,8 @@
+appsettings.Local.json
+allure-results/
+allure-report/
+.idea/
+*.user
+*.suo
+*.userprefs
+.vs/
