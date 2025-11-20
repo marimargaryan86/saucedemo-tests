@@ -4,8 +4,10 @@ namespace SauceDemo.UiTests.Pages;
 
 public class CartPage : BasePage
 {
-    private readonly By _cartItems = By.ClassName("cart_item");
-    private readonly By _checkoutButton = By.Id("checkout");
+    private readonly By _cartItems = By.CssSelector("[data-test=\"inventory-item\"]");
+    private readonly By _checkoutButton = By.CssSelector("[data-test=\"checkout\"]");
+    
+    
 
     public CartPage(IWebDriver driver) : base(driver) { }
 

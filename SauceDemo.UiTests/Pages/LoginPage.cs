@@ -5,10 +5,11 @@ namespace SauceDemo.UiTests.Pages;
 
 public class LoginPage : BasePage
 {
-    private readonly By _usernameInput = By.Id("user-name");
-    private readonly By _passwordInput = By.Id("password");
-    private readonly By _loginButton = By.Id("login-button");
+    private readonly By _usernameInput    = By.CssSelector("[data-test=\"username\"]");
+    private readonly By _passwordInput    = By.CssSelector("[data-test=\"password\"]");
+    private readonly By _loginButton = By.CssSelector("[data-test=\"login-button\"]");
 
+    
     public LoginPage(IWebDriver driver) : base(driver) { }
 
     public LoginPage GoTo()

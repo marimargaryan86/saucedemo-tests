@@ -1,4 +1,5 @@
 using OpenQA.Selenium;
+using OpenQA.Selenium.BiDi.BrowsingContext;
 using OpenQA.Selenium.Support.UI;
 
 namespace SauceDemo.UiTests.Pages;
@@ -6,9 +7,9 @@ namespace SauceDemo.UiTests.Pages;
 public class ProductsPage : BasePage
 {
     private readonly By _title = By.ClassName("title");
-    private readonly By _sortDropdown = By.ClassName("product_sort_container");
-    private readonly By _inventoryItems = By.ClassName("inventory_item");
-    private readonly By _cartIcon = By.ClassName("shopping_cart_link");
+    private readonly By _sortDropdown = By.CssSelector("[data-test=\"product-sort-container\"]");
+    private readonly By _inventoryItems =  By.CssSelector("[data-test=\"inventory-item\"]");
+    private readonly By _cartIcon = By.CssSelector("[data-test=\"shopping-cart-link\"]");
 
     public ProductsPage(IWebDriver driver) : base(driver) { }
 

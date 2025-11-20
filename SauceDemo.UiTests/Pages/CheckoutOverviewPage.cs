@@ -4,7 +4,7 @@ namespace SauceDemo.UiTests.Pages;
 
 public class CheckoutOverviewPage : BasePage
 {
-    private readonly By _finishButton = By.Id("finish");
+    private readonly By _finishButton = By.CssSelector("[data-test=\"finish\"]");
 
     public CheckoutOverviewPage(IWebDriver driver) : base(driver) { }
 

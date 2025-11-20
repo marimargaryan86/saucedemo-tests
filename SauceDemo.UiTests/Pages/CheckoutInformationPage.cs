@@ -5,10 +5,10 @@ namespace SauceDemo.UiTests.Pages;
 
 public class CheckoutInformationPage : BasePage
 {
-    private readonly By _firstName = By.Id("first-name");
-    private readonly By _lastName = By.Id("last-name");
-    private readonly By _postalCode = By.Id("postal-code");
-    private readonly By _continueButton = By.Id("continue");
+    private readonly By _firstName   = By.CssSelector("[data-test=\"firstName\"]");
+    private readonly By _lastName    = By.CssSelector("[data-test=\"lastName\"]");
+    private readonly By _postalCode  = By.CssSelector("[data-test=\"postalCode\"]");
+    private readonly By _continueButton = By.CssSelector("[data-test=\"continue\"]");
 
     public CheckoutInformationPage(IWebDriver driver) : base(driver) { }
 

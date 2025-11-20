@@ -4,7 +4,7 @@ namespace SauceDemo.UiTests.Pages;
 
 public class CheckoutCompletePage : BasePage
 {
-    private readonly By _completeHeader = By.ClassName("complete-header");
+    private readonly By _completeHeader = By.CssSelector("[data-test=\"complete-header\"]");
 
     public CheckoutCompletePage(IWebDriver driver) : base(driver) { }
 
