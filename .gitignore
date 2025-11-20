@@ -482,3 +482,12 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+# Local secrets / overrides
+appsettings.Local.json
+
+# Allure artifacts
+allure-results/
+allure-report/
+
+# Rider / IDE
+.idea/
